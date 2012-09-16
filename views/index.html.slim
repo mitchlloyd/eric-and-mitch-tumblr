@@ -1,0 +1,9 @@
+| {block:Posts}{block:Audio}
+div.latest.episode(style="background-image: url({block:AlbumArt}{AlbumArtURL}{/block:AlbumArt})")
+  .content
+    .title {block:TrackName}{TrackName}{/block:TrackName}
+    .description {Caption}
+    .audio-player {AudioPlayerGrey}
+    a.download(href="{ExternalAudioURL}") Download this episode
+    .released Released on {MonthNumber}/{DayOfMonth}/{Year}
+| {/block:Audio}{/block:Posts}

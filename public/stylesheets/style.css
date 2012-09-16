@@ -1,0 +1,165 @@
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before, body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+body {
+  font-family: georgia, serif;
+  line-height: 1.5;
+  width: 960px;
+  margin: 0px auto;
+  overflow: hidden;
+  background-image: url("../images/bg-pattern.png");
+}
+body a {
+  color: #ffad08;
+  text-decoration: none;
+}
+body a:hover {
+  color: #d48e00;
+}
+
+section#header table {
+  display: inline;
+  float: left;
+  width: 940px;
+  margin: 0 10px;
+}
+section#header td.title {
+  white-space: nowrap;
+}
+section#header td.line-spacer {
+  width: 50%;
+}
+section#header td.line-spacer hr {
+  border: 0px;
+  background-color: #c8c8c8;
+  height: 2px;
+}
+section#header h1 {
+  display: inline-block;
+  font-size: 38px;
+  padding: 0.25em;
+  margin: 0.25em 0em;
+}
+section#header .subtitle {
+  display: inline;
+  float: left;
+  width: 540px;
+  margin: 0 10px;
+  font-size: 15px;
+  color: #444444;
+}
+section#header .subscribe {
+  display: inline;
+  float: left;
+  width: 380px;
+  margin: 0 10px;
+}
+section#header a.rss, section#header a.itunes {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 2em;
+  line-height: 3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+section#header a.rss {
+  background-image: url("../images/rss.png");
+}
+section#header a.itunes {
+  background-image: url("../images/itunes.png");
+  margin-right: 1.5em;
+}
+
+.episode {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 940px;
+  margin: 0 10px;
+  margin-top: 2em;
+  overflow: hidden;
+  color: #b87b00;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+.episode .title {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+.episode .content {
+  padding: 20px;
+  background-color: #fff1d4;
+  display: inline;
+  float: left;
+  width: 580px;
+  margin: 0 10px;
+  margin-left: 320px;
+}
+.episode .content p {
+  margin-top: 0px;
+}
+.episode .released {
+  color: #ffbc33;
+}
+.episode a {
+  color: white;
+}
+.episode a.download {
+  @column(3);
+  display: inline-block;
+  color: #b87b00;
+  border-bottom: 1px dotted #b87b00;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+.episode a.download:hover {
+  border-bottom: 1px dotted #483000;
+  color: #483000;
+}
+
+.latest {
+  background-color: #ffad08;
+  color: white;
+}
+.latest .content {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffbe3b), color-stop(100%, #ffad08));
+  background: -webkit-linear-gradient(top, #ffbe3b, #ffad08);
+  background: -moz-linear-gradient(top, #ffbe3b, #ffad08);
+  background: -o-linear-gradient(top, #ffbe3b, #ffad08);
+  background: linear-gradient(top, #ffbe3b, #ffad08);
+}
+.latest .released {
+  color: #ffe0a1;
+}
+.latest a.download {
+  border-bottom: 1px dotted white;
+  color: white;
+}
+.latest a.download:hover {
+  border-bottom: 1px dotted #976500;
+  color: #976500;
+}
+
+div.jp-audio {
+  float: left;
+  clear: left;
+  width: 290px !important;
+  margin-right: 20px;
+}
+div.jp-audio .jp-progress, div.jp-audio .jp-time-holder {
+  left: 80px !important;
+}
+div.jp-audio .jp-controls {
+  width: 250px !important;
+}

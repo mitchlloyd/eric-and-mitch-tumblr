@@ -1,0 +1,129 @@
+@import _grid
+
+$accent: #ffad08
+
+body
+  font-family: georgia, serif
+  line-height: 1.5
+  width: 960px
+  margin: 0px auto
+  overflow: hidden
+  background-image: url('../images/bg-pattern.png')
+
+  a
+    color: $accent
+    text-decoration: none
+  a:hover
+    color: darken($accent, 10)
+
+section#header
+  @include clearfix
+  table
+    @include column(24)
+  td.title
+    white-space: nowrap
+  td.line-spacer
+    width: 50%
+    hr
+      border: 0px
+      background-color: #c8c8c8
+      height: 2px
+  h1
+    display: inline-block
+    font-size: 38px
+    padding: 0.25em
+    margin: 0.25em 0em
+
+  .subtitle
+    @include column(14)
+    font-size: 15px
+    color: #444
+
+  .subscribe
+    @include column(10)
+
+  a.rss, a.itunes
+    background-repeat: no-repeat
+    background-position: left center
+    padding-left: 2em
+    line-height: 3em
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+
+  a.rss
+    background-image: url('../images/rss.png')
+
+  a.itunes
+    background-image: url('../images/itunes.png')
+    margin-right: 1.5em
+
+.episode
+  $font-color: #b87b00
+  position: relative
+  @include column(24)
+  margin-top: 2em
+  overflow: hidden
+  color: $font-color
+  border-radius: 3px
+  box-sizing: border-box
+  background-repeat: no-repeat
+
+  .title
+    display: block
+    font-size: 24px
+    margin-bottom: 0.5em
+
+  .content
+    padding: 20px
+    background-color: lighten(#ffad08, 40)
+    @include column(15)
+    margin-left: 320px
+    p
+      margin-top: 0px
+
+  .released
+    color: lighten($font-color, 24)
+
+  a
+    color: white
+
+  a.download
+    @column(3)
+    display: inline-block
+    color: $font-color
+    border-bottom: 1px dotted $font-color
+    &:hover
+      border-bottom: 1px dotted darken($font-color, 22)
+      color: darken($font-color, 22)
+
+.latest
+  background-color: #ffad08
+  color: white
+  .content
+    //linear-gradient(top, lighten(#ffad08, 10), #ffad08)
+    $top-color: lighten(#ffad08, 10)
+    $bottom-color: #ffad08
+    background: linear-gradient($top-color, $bottom-color)
+    background: -moz-linear-gradient($top-color, $bottom-color)
+    background: -ms-linear-gradient($top-color, $bottom-color)
+    background: -o-linear-gradient($top-color, $bottom-color)
+    background: -webkit-linear-gradient($top-color, $bottom-color)
+    
+  .released
+    display: inline-block
+    color: lighten(#ffad08, 30)
+
+  a.download
+    display: inline-block
+    margin-right: 1em
+    border-bottom: 1px dotted white
+    color: white
+    &:hover
+      border-bottom: 1px dotted darken($accent, 22)
+      color: darken($accent, 22)
+
+  .audio-player
+    display: block
+    float: left
+    margin-right: 1em
+
