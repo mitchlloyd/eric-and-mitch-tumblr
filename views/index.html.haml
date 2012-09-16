@@ -11,24 +11,22 @@
 %ul#posts
   {block:Posts}{block:Audio}
   %section.caption
-    {block:TrackName}
     %h2
       %a{:href => "{Permalink}"} {TrackName}
-    {/block:TrackName}
-    %section.audio-player.top.audio {AudioPlayerGrey}
   
   %section.group.caption_and_post_info
     {block:Caption}
     %section.caption.group
       .cont
         {block:AlbumArt}
-        %img.album-art{:src => "{AlbumArtURL}"}/
+        %img.album-art{:src => "{AlbumArtURL}"}
         {/block:AlbumArt}
+
         {Caption}
+
+        %section.audio-player.top.audio {AudioPlayerGrey}
+        .date {MonthNumber}/{DayOfMonth}/{Year}
     {/block:Caption}
     
-    %ul.post_info
-      %li
-        %a.timestamp
       
   {/block:Audio}{/block:Posts}
