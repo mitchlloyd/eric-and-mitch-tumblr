@@ -9,14 +9,13 @@
       Subscribe via RSS
 
 %ul#posts
-  {block:Posts}
-  {block:Audio}
+  {block:Posts}{block:Audio}
   %section.caption
     {block:TrackName}
     %h2
       %a{:href => "{Permalink}"} {TrackName}
     {/block:TrackName}
-    %section.audio-player.top.audio {AudioPlayerBlack}
+    %section.audio-player.top.audio {AudioPlayerGrey}
   
   %section.group.caption_and_post_info
     {block:Caption}
@@ -26,42 +25,10 @@
         %img.album-art{:src => "{AlbumArtURL}"}/
         {/block:AlbumArt}
         {Caption}
-      {block:ContentSource}
-      .cont.content_source
-        %a{:href => "{SourceURL}"}
-          {lang:Source}:
-          {block:SourceLogo}
-          %img{:alt => "{SourceTitle}", :height => "{LogoHeight}", :src => "{BlackLogoURL}", :width => "{LogoWidth}"}
-          {/block:SourceLogo}
-          {block:NoSourceLogo}
-          {SourceTitle}
-          {/block:NoSourceLogo}
-      {/block:ContentSource}
     {/block:Caption}
     
     %ul.post_info
       %li
         %a.timestamp
       
-      {block:IfShowPostNotes}
-      {block:NoteCount}
-      %li
-        %a.notecount{:href => "{Permalink}#notes"} {NoteCount} notes
-      {/block:NoteCount}
-      {/block:IfShowPostNotes}
-      
-      {block:IfShowTags}
-      {block:Tags}
-      %li
-        %a.tag{:href => "{TagURL}"}
-          %span> #
-          {Tag}
-      {/block:Tags}
-      {/block:IfShowTags}
-    {block:PostNotes}
-    %section.post_notes
-      %a{:name => "notes"}
-        {PostNotes}
-    {/block:PostNotes}
-  {/block:Audio}
-  {/block:Posts}
+  {/block:Audio}{/block:Posts}
