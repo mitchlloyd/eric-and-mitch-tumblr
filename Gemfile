@@ -7,6 +7,8 @@ gem 'compass'
 gem 'haml'
 gem 'slim'
 
+gem 'podcast_press', git: "git://github.com/mitchlloyd/podcast-press.git"
+
 # Coffee Script
 # gem 'coffee-script'
 
