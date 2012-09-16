@@ -1,0 +1,4 @@
+#! /bin/bash
+
+bundle exec serve export
+cat html/index.html | pbcopy
