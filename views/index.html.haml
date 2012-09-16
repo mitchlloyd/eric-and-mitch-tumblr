@@ -1,0 +1,67 @@
+%header#header
+  %section#blog_info
+    %h1
+      %a{:href => "/"} {Title}
+    .description.cont {Description}
+    %a{:href => "http://itunes.apple.com/us/podcast/eric-and-mitch-explain/id533649535"}
+      Subscribe on iTunes
+    %a{:href => "http://feeds.feedburner.com/ericandmitchexplain"}
+      Subscribe via RSS
+
+%ul#posts
+  {block:Posts}
+  {block:Audio}
+  %section.caption
+    {block:TrackName}
+    %h2
+      %a{:href => "{Permalink}"} {TrackName}
+    {/block:TrackName}
+    %section.audio-player.top.audio {AudioPlayerBlack}
+  
+  %section.group.caption_and_post_info
+    {block:Caption}
+    %section.caption.group
+      .cont
+        {block:AlbumArt}
+        %img.album-art{:src => "{AlbumArtURL}"}/
+        {/block:AlbumArt}
+        {Caption}
+      {block:ContentSource}
+      .cont.content_source
+        %a{:href => "{SourceURL}"}
+          {lang:Source}:
+          {block:SourceLogo}
+          %img{:alt => "{SourceTitle}", :height => "{LogoHeight}", :src => "{BlackLogoURL}", :width => "{LogoWidth}"}
+          {/block:SourceLogo}
+          {block:NoSourceLogo}
+          {SourceTitle}
+          {/block:NoSourceLogo}
+      {/block:ContentSource}
+    {/block:Caption}
+    
+    %ul.post_info
+      %li
+        %a.timestamp
+      
+      {block:IfShowPostNotes}
+      {block:NoteCount}
+      %li
+        %a.notecount{:href => "{Permalink}#notes"} {NoteCount} notes
+      {/block:NoteCount}
+      {/block:IfShowPostNotes}
+      
+      {block:IfShowTags}
+      {block:Tags}
+      %li
+        %a.tag{:href => "{TagURL}"}
+          %span> #
+          {Tag}
+      {/block:Tags}
+      {/block:IfShowTags}
+    {block:PostNotes}
+    %section.post_notes
+      %a{:name => "notes"}
+        {PostNotes}
+    {/block:PostNotes}
+  {/block:Audio}
+  {/block:Posts}
